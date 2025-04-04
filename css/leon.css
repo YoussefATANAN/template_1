@@ -1,0 +1,120 @@
+/*  */
+/* start global rules */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* meduim */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170pxpx;
+  }
+}
+/* end global rules */
+
+/* start header */
+header {
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  width: 60px;
+}
+
+header .links {
+  position: relative;
+}
+
+header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header .links .icon {
+  width: 30px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+header .links .icon span {
+  height: 2px;
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #000;
+}
+
+header .links .icon :nth-child(2) {
+  width: 70%;
+  transition: 0.3s;
+}
+
+header .links ul {
+  background-color: #eee;
+  position: absolute;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  width: 200px;
+  display: none;
+}
+
+header .links ul::before {
+  content: "";
+  border: 15px solid transparent;
+  border-bottom: 15px solid #eee;
+  position: absolute;
+  left: 100%;
+  transform: translate(-100%, -100%);
+}
+
+header .links ul li:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+header .links ul li a {
+  display: block;
+  text-decoration: none;
+  color: #1d1c1cd1;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+header .links ul li a:hover{
+    padding-left: 25px;
+}
+/* end header */
